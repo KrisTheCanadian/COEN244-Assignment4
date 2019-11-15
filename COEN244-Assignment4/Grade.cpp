@@ -4,7 +4,9 @@ Grade::Grade(Course course, std::string grade)
 {}
 std::ostream& operator<<(std::ostream& out, Grade& grade)
 {
-	out << "Course Name: " << grade.getcourse().getcourseName() << " Course Number: " << grade.getcourse().getcourseNumber() << " Course Grade: " << grade.getgrade() << std::endl;
+	out << "Course Name: " << grade.getcourse().getcourseName() << std::endl;
+	out << "Course Number: " << grade.getcourse().getcourseNumber() << std::endl;
+	out << "Course Grade: " << grade.getgrade() << std::endl;
 	return out;
 }
 //get - set

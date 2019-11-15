@@ -19,7 +19,7 @@ class CourseSchedule
 		Time gettime2() const;
 		void settime2(Time);
 		virtual void print(); //prints all the data member values.
-		//~CourseSchedule(); No dynamically allocated member functions. No need to define the default constructor.
+		~CourseSchedule(); //No dynamically allocated member functions. No need to define the default constructor.
 	private:
 		Course m_course; //An object of the Course class
 		std::string m_coursePrerequisite; //This is the course number of the pre-requisite course, example "COEN243"

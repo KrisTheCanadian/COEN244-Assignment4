@@ -13,3 +13,9 @@ Grade **UndergraduateStudent::getstuRecord() { return m_studentRecord; }
 void UndergraduateStudent::setstuRecord(Grade*)
 {
 };
+UndergraduateStudent::~UndergraduateStudent(){}
+
+bool UndergraduateStudent::checking_a_course(std::string coursenumber) 
+{
+	for(int i=0; i < m_max_no_of_courses)
+}
