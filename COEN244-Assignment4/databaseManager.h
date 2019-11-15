@@ -2,6 +2,7 @@
 #include <string>
 #include "Student.h"
 #include "CourseRegistration.h"
+#include <algorithm>
 
 //The following class manages registration of the students to the courses and stores student records
 
@@ -33,7 +34,7 @@ private:
 	int m_no_of_students_enrolled; //number of the students at the university
 	//The following array stores information about the students
 	Student* m_array_student[m_max_no_of_students];
-	//The following array stores ourse registration information about all the offered courses
+	//The following array stores course registration information about all the offered courses
 	CourseRegistration* m_arrayCourse[m_no_of_offered_courses];
 };
 

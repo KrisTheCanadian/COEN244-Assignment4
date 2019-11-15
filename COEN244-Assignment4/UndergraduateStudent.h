@@ -10,9 +10,9 @@ class UndergraduateStudent :
 {
 public:
 	UndergraduateStudent(std::string, int);
-	Grade* getstuRecord() const;
+	Grade** getstuRecord();
 	void setstuRecord(Grade*);
-	~UndergraduateStudent();
+	//~UndergraduateStudent();	Not necessary
 	virtual void print() const; //prints student name, student-id and student record
 private:
 	static const int m_max_no_of_courses = 40;

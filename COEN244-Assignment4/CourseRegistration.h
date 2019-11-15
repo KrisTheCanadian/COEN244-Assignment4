@@ -8,9 +8,8 @@ class CourseRegistration :
 	public Course
 {
 public:
-	CourseRegistration(Course, std::string);
-	int getregisteredCourse() const;
-	void setregisteredCourse(int);
+	CourseRegistration(Course);
+	int *getregisteredCourse();
 	int getno_of_students() const;
 	void setno_of_students(int);
 	//Register a student to a course
@@ -20,7 +19,7 @@ public:
 	bool dropping_a_course(int); //student id
 	void print(); //prints course name and number and the student-id of registered students
 private:
-	static const int m_classSize = 60;
+	static const int m_classSize = 60; //ALL OBJECTS OF THE CLASS CourseRegistration has a maximum of 60
 	int m_registeredtoCourse[m_classSize]; //this array stores the student-ids of the students registered to this course
 	int m_no_of_registeredStudents;
 };
