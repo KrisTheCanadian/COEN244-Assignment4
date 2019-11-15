@@ -14,7 +14,7 @@ public:
 	std::string getcourseName() const;
 	void setcourseName(std::string);
 	virtual void print();
-	//~Course(); Completely useless defining a constructor when there's nothing dynamically allocated
+	~Course(); // Completely useless defining a constructor when there's nothing dynamically allocated
 private:
 	std::string m_courseNumber; //Example: coursNumber = "COEN 244"
 	std::string m_courseName; //Example: courseName = "ProgrammingMethodology" 
