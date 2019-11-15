@@ -8,7 +8,7 @@ class GraduateStudent :
 {
 public:
 	GraduateStudent(std::string, int);
-	Grade* getstuRecord() const;
+	Grade **getstuRecord();
 	void setstuRecord(Grade*);
 	~GraduateStudent();
 	virtual void print() const; //print student name and student id and student record
