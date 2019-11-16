@@ -129,6 +129,7 @@
     <ClCompile Include="databaseManager.cpp" />
     <ClCompile Include="Grade.cpp" />
     <ClCompile Include="GraduateStudent.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="UndergraduateStudent.cpp" />

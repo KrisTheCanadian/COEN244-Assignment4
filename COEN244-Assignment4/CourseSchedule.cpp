@@ -5,7 +5,10 @@ CourseSchedule::CourseSchedule(Course course, std::string preReq, Time time1, Ti
 {}
 void CourseSchedule::CourseSchedule::print() {
 	this->m_course.print();
-	std::cout << "Prerequisite: " << this->m_coursePrerequisite << " Start Time: " << this->m_time1 << " End Time: " << this->m_time2 << std::endl;
+	std::cout << "Prerequisite: " + this->m_coursePrerequisite + " Start Time: "; 
+	std::cout << m_time1;
+	std::cout << " End Time: ";
+	std::cout << m_time2 << std::endl;
 };
 Course CourseSchedule::getcourse() const { return m_course; };
 void CourseSchedule::setcourse(Course c) { m_course = c; };

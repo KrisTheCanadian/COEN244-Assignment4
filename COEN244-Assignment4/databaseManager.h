@@ -18,7 +18,7 @@ public:
 	bool deleter(int); //student_id
 
 	//Register a student with the given student_id parameter to the course with the given course number
-	bool registering_to_Course(int, std::string);
+	bool registering_to_Course(int, Grade);
 
 	//Remove registration of a student with the given student-id parameter and the course number
 	bool dropping_a_Course(int, std::string);

@@ -12,6 +12,7 @@ public:
 	int *getregisteredCourse();
 	int getno_of_students() const;
 	void setno_of_students(int);
+	int get_class_max();
 	//Register a student to a course
 	bool register_a_course(int); //student id
 

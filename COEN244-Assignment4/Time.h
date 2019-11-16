@@ -15,7 +15,7 @@ public:
 	//Overload the equality operator to test if two Time objects are same
 	bool operator==(const Time&) const;
 	// Overload the insertion operator to output hour and day data member values.
-	friend std::ostream& operator<<(std::ostream&, Time&);
+	friend std::ostream& operator<<(std::ostream& out, const Time& time);
 private:
 	int m_hour;
 	int m_day;

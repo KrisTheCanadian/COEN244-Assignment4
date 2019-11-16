@@ -35,26 +35,34 @@ bool databaseManager::deleter(int stuID)
 	return false;
 };
 
-bool databaseManager::registering_to_Course(int id, std::string course)
+bool databaseManager::registering_to_Course(int id, Grade grade)
 {
 	for (int i = 0; i < m_no_of_offered_courses; i++)
 	{
-		if (m_arrayCourse[i]->getcourseNumber() == course)
-		{
-			m_arrayCourse[i]->register_a_course(id);
+		if(m_arrayCourse[i] != nullptr){
+			if (m_arrayCourse[i]->getcourseNumber() == grade.getcourse().getcourseNumber())
+			{
+				m_arrayCourse[i]->register_a_course(id);
+				return true;
+			}
 		}
 	}
+	return false;
 };
 
 bool databaseManager::dropping_a_Course(int id, std::string course)
 {
 	for (int i = 0; i < m_no_of_offered_courses; i++)
 	{
-		if (m_arrayCourse[i]->getcourseNumber() == course)
-		{
-			m_arrayCourse[i]->dropping_a_course(id);
+		if(m_arrayCourse[i] != nullptr){
+			if (m_arrayCourse[i]->getcourseNumber() == course)
+			{
+				m_arrayCourse[i]->dropping_a_course(id);
+				return true;
+			}
 		}
 	}
+	return false;
 };
 
 void databaseManager::print(int studentid)
@@ -71,9 +79,9 @@ void databaseManager::print(int studentid)
 	}
 	for (CourseRegistration* course_req_ptr : m_arrayCourse) {
 		if (course_req_ptr != nullptr) {
-			for (int stuID : course_req_ptr->getregisteredCourse) {
-				if (studentid == stuID) {
-					course_req_ptr->print();	//might have to print it as a Course instead of courseRegistration
+			for (int i = 0; i < course_req_ptr->get_class_max(); i++) {
+				if (studentid == course_req_ptr->getregisteredCourse()[i]) {
+					course_req_ptr->print();
 				}
 			}
 		}
@@ -81,25 +89,18 @@ void databaseManager::print(int studentid)
 
 }
 
+//prints student IDs taking the class
 void databaseManager::print(std::string course) 
 {
 	for (CourseRegistration* course_req_ptr : m_arrayCourse) {
 		if (course_req_ptr != nullptr) {
 			if (course_req_ptr->getcourseName() == course)
 			{
-				for (int studentID : course_req_ptr->getregisteredCourse)
+				for (int i = 0; i < course_req_ptr->get_class_max(); i++)	//int studentID : course_req_ptr->getregisteredCourse()
 				{
-					for (Student* stuptr : m_array_student) 
-					{
-						if (stuptr != nullptr) 
-						{
-							if (stuptr->getstudID() == studentID) {
-								stuptr->print(); // I printed more info.
-							}
-						}
-
-					}
+					std::cout << " Student: " << course_req_ptr->getregisteredCourse()[i] << std::endl;
 				}
+				return;
 			}
 		}
 	}

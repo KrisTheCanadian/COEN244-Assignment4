@@ -15,6 +15,12 @@ int *CourseRegistration::getregisteredCourse() {
 
 int CourseRegistration::getno_of_students() const { return m_no_of_registeredStudents; };
 void CourseRegistration::setno_of_students(int s) { m_no_of_registeredStudents = s; }
+
+int CourseRegistration::get_class_max()
+{
+	return m_classSize;
+}
+
 bool CourseRegistration::register_a_course(int studentid)
 {
 	for (int i = 0; i < m_classSize; i++)

@@ -12,8 +12,18 @@ UndergraduateStudent::UndergraduateStudent(std::string stuName, int stuID)
 Grade **UndergraduateStudent::getstuRecord() { return m_studentRecord; }
 void UndergraduateStudent::setstuRecord(Grade*)
 {
-};
+}
 UndergraduateStudent::~UndergraduateStudent(){}
+
+void UndergraduateStudent::print() const
+{
+	std::cout << "Student Name: " << this->getstuName() + " Student ID: " << this->getstudID() << std::endl;
+	for (int i = 0; i < m_max_no_of_courses; i++) {
+		if (this->m_studentRecord[i] != nullptr) {
+			std::cout << this->m_studentRecord[i];	//THIS WILL PROBABLY ALSO GIVE A LINKER ERROR
+		}
+	}
+}
 
 bool UndergraduateStudent::checking_a_course(std::string coursenumber) 
 {
