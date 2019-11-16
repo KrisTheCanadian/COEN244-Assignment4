@@ -44,7 +44,7 @@ bool UndergraduateStudent::register_a_course(Grade a)
 				{
 					for (int l = 0; l < m_max_no_of_courses; l++)
 					{
-						if (m_studentRecord[l]->getcourse().getcourseNumber() == arrayCourse[j]->getPrerequ())
+						if (this->m_studentRecord[l]->getcourse().getcourseNumber() == arrayCourse[j]->getPrerequ())
 						{
 							m_studentRecord[i] = &a;
 							return true;
