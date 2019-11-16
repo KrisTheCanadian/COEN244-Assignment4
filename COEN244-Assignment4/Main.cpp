@@ -45,6 +45,8 @@ void test()
 	CourseSchedule* courseschedule1 = new CourseSchedule(*course3, (std::string)"ENGR 213", *t1, *t2);
 	CourseSchedule* courseschedule1 = new CourseSchedule(*course4, (std::string)"COEN 244", *t1, *t2);
 
+	databaseManager* d1 = new databaseManager();
+
 	
 
 	
@@ -83,6 +85,9 @@ void test()
 	delete coursereg2;
 	delete coursereg3;
 	delete coursereg4;
+
+	//delete database manager
+	delete d1;
 }
 int main() {
 
