@@ -12,7 +12,7 @@ public:
 	UndergraduateStudent(std::string, int);
 	Grade** getstuRecord();
 	void setstuRecord(Grade*);
-	virtual bool checking_a_course(std::string);
+	virtual bool checking_a_course(std::string) override;
 	virtual bool register_a_course(Grade) override;
 	virtual bool dropping_a_course(std::string) override;
 	~UndergraduateStudent();//Not necessary

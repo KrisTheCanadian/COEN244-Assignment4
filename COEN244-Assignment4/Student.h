@@ -14,7 +14,7 @@ public:
 	int getstudID() const;
 	void setstudID(int);
 	//checking whether a student has taken or registered to a course.
-	virtual bool checking_a_couse(std::string); //coursenumber
+	virtual bool checking_a_course(std::string); //coursenumber
 
 	//add a course grade to a student's record.
 	virtual bool register_a_course(Grade);
